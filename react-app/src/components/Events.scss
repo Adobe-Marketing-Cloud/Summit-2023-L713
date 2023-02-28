@@ -1,0 +1,81 @@
+/*
+Copyright 2022 Adobe
+All Rights Reserved.
+
+NOTICE: Adobe permits you to use, modify, and distribute this file in
+accordance with the terms of the Adobe license agreement accompanying
+it.
+*/
+@import '../styles/variables';
+
+$eventItemWidth: calc(50% - 1em);
+$eventItemHeight: 200px;
+
+$eventItemWidthMobile: 300px;
+$eventItemHeightMobile: 250px;
+
+.event-items {
+  display: flex;
+  list-style: none;
+  margin-top: 1em;
+  padding: 0;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: normal;
+}
+
+.event-item {
+  flex-basis: $eventItemWidth;
+  margin: 0 0 2rem;
+  padding-right: 14px;
+}
+
+.event-item-image {
+  width: 100%;
+  height: $eventItemHeight;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  margin-bottom: 7px;
+}
+
+.event-item-title {
+  font-weight: bold;
+  font-size: $font-size-medium;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.event-item-length-price {
+  width: 100%;
+  height: 20px;
+}
+
+.event-item-length {
+  float: left;
+}
+
+.event-item-price {
+  float: right;
+}
+
+@media only screen and (max-width: $tablet-breakpoint) {
+  .event-items {
+    justify-content: normal;
+  }
+
+  .event-item {
+    flex-basis: $eventItemWidthMobile;
+  }
+
+  .event-item-image {
+    height: $eventItemHeightMobile;
+  }
+}
+
+@media only screen and (max-width: $mobile-breakpoint) {
+  .event-items {
+    justify-content: center;
+  }
+}
