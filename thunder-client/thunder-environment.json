@@ -6,7 +6,7 @@
     "variables": [
         {
             "name": "URL",
-            "value": "https://author-pXXXXX-eYYYYY.adobeaemcloud.com/"
+            "value": "https://author-pXXXXX-eYYYYY.adobeaemcloud.com"
         },
         {
             "name": "TOKEN",
