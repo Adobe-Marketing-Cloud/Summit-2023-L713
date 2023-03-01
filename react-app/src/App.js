@@ -8,6 +8,7 @@ import Articles from "./components/Articles";
 import ArticleDetail from "./components/ArticleDetail";
 import About from "./components/About";
 import ContentSample from "./components/ContentSample";
+import EventDetail from "./components/EventDetail";
 const {REACT_APP_HOST_URI} = process.env;
 
 // import { EditorProvider } from '@aem-sites/universal-editor-react';
@@ -44,6 +45,7 @@ function App() {
             <Route path="/articles" element={<Articles />} />
             <Route path="/articles/article:slug" element={<ArticleDetail />} />
             <Route path="/articles/article:slug/aboutus" element={<About />} />
+            <Route path="/event:slug" element={<EventDetail />} />
           </Routes>
         </Router>
       </div>
