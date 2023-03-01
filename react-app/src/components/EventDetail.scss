@@ -1,0 +1,114 @@
+/*
+Copyright 2022 Adobe
+All Rights Reserved.
+NOTICE: Adobe permits you to use, modify, and distribute this file in
+accordance with the terms of the Adobe license agreement accompanying
+it.
+*/
+@use "sass:math";
+
+@import '../styles/variables';
+
+.event-detail {
+  .event-detail-close-button {
+    width: 24px;
+    float: right;
+    margin: 1em;
+    background: none;
+    border: none;
+  }
+
+  .event-detail-content {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    width: 100%;
+
+    .event-detail-teasingImage {
+      width: 100%;
+      height: auto;
+    }
+
+    .event-detail-speakers {
+      grid-column: 1 / -1;
+      
+       .event-detail-speakers-grid {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin: 2rem;
+
+        .event-detail-speaker {
+          position: relative;
+          // width: 250px;
+          height: 350px;
+          display: grid;
+          grid-template-rows: 1fr auto;
+
+          &.event-detail-keynote-speaker {
+            background-image: url("../images/keynote-bg.png");
+          }
+
+          .event-detail-speaker-card {
+            background-color: rgba(#000, .7);
+            color: white;
+            grid-row: 2;
+            padding: .5rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 1;
+
+            > span {
+              margin-bottom: .4rem;
+            }
+
+            .event-detail-speaker-name {
+              font-weight: 700;
+            }
+          }
+
+          .event-detail-speaker-img {
+            position: absolute;
+            object-fit: cover;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-breakpoint) {
+  .event-detail {
+    .event-detail-content {
+      grid-template-columns: 1fr 1fr;
+
+      .event-detail-speakers {
+        .event-detail-speakers-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet-breakpoint) {
+  .event-detail {
+    .event-detail-content {
+      .event-detail-speakers {
+        .event-detail-speakers-grid {
+          grid-template-columns: repeat(4, 1fr);
+
+          .event-detail-speaker.event-detail-keynote-speaker {
+            grid-column: span 2;
+          }
+        }
+      }
+    }
+  }
+}
