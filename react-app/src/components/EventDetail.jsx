@@ -29,10 +29,10 @@ function NoEventFound() {
 function EventDetailRender(props) {
   return (
       <div itemScope>
-          <h1 className="event-detail-title" itemProp="eventName" itemType="text">{props.eventName}</h1>
+          <h1 className="event-detail-title">{props.eventName}</h1>
           <div className="event-detail-content">
               <img className="event-detail-teasingImage"
-                  src={props.teasingImage._publishUrl} alt={props.eventName} itemType="media"/>
+                  src={props.teasingImage._publishUrl} alt={props.eventName}/>
               <div>
               <div className="event-detail-dates">
                   <span className="event-item-date">{props.startDate}</span>
