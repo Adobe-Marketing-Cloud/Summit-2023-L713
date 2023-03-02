@@ -14,17 +14,19 @@ import Loading from './Loading';
 import "./Events.scss";
 
 function EventItem(props) {
+  const editorProps = useMemo(() => true && { itemID: "urn:aemconnection:" + props?._path + "/jcr:content/data/master", itemType: "reference", itemfilter: "cf"}, [props._path]);
+
   // Must have eventName, path, and image
   if (!props || !props._path || !props.eventName || !props.teasingImage) {
     return null;
   }
 
   return (
-    <li className="event-item">
+    <li className="event-item" itemScope {...editorProps}>
       <Link to={`/event:${props.slug}`}>
         <img className="event-item-image" src={`${props.teasingImage._publishUrl}`}
                 alt={props.title} itemProp="teasingImage" />
-        <div className="event-item-title">{props.eventName}</div>
+        <div className="event-item-title" itemProp="eventName" itemType="text">{props.eventName}</div>
       </Link>
       <div className="event-item-details">
         <span className="event-item-date">{props.startDate}</span>
