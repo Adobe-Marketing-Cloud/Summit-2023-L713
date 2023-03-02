@@ -27,9 +27,9 @@ function EventItem(props) {
         <div className="event-item-title" itemProp="eventName" itemType="text">{props.eventName}</div>
       </Link>
       <div className="event-item-details">
-        <span className="event-item-date" itemProp="eventStart" itemType="date">{props.eventStart}</span>
+        <span className="event-item-date" itemProp="startDate" itemType="date">{props.startDate}</span>
         <span> to </span>
-        <span className="event-item-date" itemProp="eventEnd" itemType="date">{props.eventEnd}</span>
+        <span className="event-item-date" itemProp="endDate" itemType="date">{props.endDate}</span>
       </div>
     </li>
   );
