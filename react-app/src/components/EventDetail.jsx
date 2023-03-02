@@ -28,7 +28,7 @@ function NoEventFound() {
 
 function EventDetailRender(props) {
   return (
-      <div itemScope>
+      <div>
           <h1 className="event-detail-title">{props.eventName}</h1>
           <div className="event-detail-content">
               <img className="event-detail-teasingImage"
