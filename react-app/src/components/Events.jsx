@@ -23,13 +23,13 @@ function EventItem(props) {
     <li className="event-item" itemScope>
       <Link to={`/event:${props.slug}`}>
         <img className="event-item-image" src={`${props.teasingImage._publishUrl}`}
-                alt={props.title} itemProp="teasingImage" itemType="image" />
-        <div className="event-item-title" itemProp="eventName" itemType="text">{props.eventName}</div>
+                alt={props.title} itemProp="teasingImage" />
+        <div className="event-item-title">{props.eventName}</div>
       </Link>
       <div className="event-item-details">
-        <span className="event-item-date" itemProp="startDate" itemType="date">{props.startDate}</span>
+        <span className="event-item-date">{props.startDate}</span>
         <span> to </span>
-        <span className="event-item-date" itemProp="endDate" itemType="date">{props.endDate}</span>
+        <span className="event-item-date">{props.endDate}</span>
       </div>
     </li>
   );
