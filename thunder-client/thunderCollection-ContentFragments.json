@@ -1,14 +1,14 @@
 {
     "client": "Thunder Client",
     "collectionName": "Content Fragments",
-    "dateExported": "2023-02-28T17:48:34.126Z",
+    "dateExported": "2023-03-02T01:42:12.811Z",
     "version": "1.1",
     "folders": [
         {
-            "_id": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
+            "_id": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
             "name": "Exercise 1",
             "containerId": "",
-            "created": "2023-02-22T01:15:06.303Z",
+            "created": "2023-03-02T00:41:01.244Z",
             "sortNum": 97500,
             "settings": {
                 "headers": [
@@ -25,10 +25,10 @@
             }
         },
         {
-            "_id": "842fdde4-2970-48fb-9d90-c91fc501a858",
+            "_id": "82e0332f-511f-409e-b181-0f83294abe22",
             "name": "Exercise 2",
             "containerId": "",
-            "created": "2023-02-28T17:45:38.020Z",
+            "created": "2023-03-02T00:41:01.245Z",
             "sortNum": 105000,
             "settings": {
                 "headers": [],
@@ -42,15 +42,15 @@
     ],
     "requests": [
         {
-            "_id": "39f0d3e3-85f6-416a-890d-ee1b8e813ac3",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "842fdde4-2970-48fb-9d90-c91fc501a858",
+            "_id": "c96c8ba8-94e5-46ba-9a63-03a94782063d",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "82e0332f-511f-409e-b181-0f83294abe22",
             "name": "Test Direct Query",
             "url": "/content/cq:graphql/{{TENANT}}/endpoint.json",
             "method": "POST",
             "sortNum": 5000,
-            "created": "2023-02-28T17:45:38.018Z",
-            "modified": "2023-02-28T17:45:38.018Z",
+            "created": "2023-03-02T00:41:01.244Z",
+            "modified": "2023-03-02T00:41:01.244Z",
             "headers": [],
             "params": [],
             "body": {
@@ -65,15 +65,15 @@
             "tests": []
         },
         {
-            "_id": "df59e5b0-6019-4e9a-bfd9-7ce7d3b88710",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "842fdde4-2970-48fb-9d90-c91fc501a858",
+            "_id": "b03b2e7e-f1b9-4d2e-aae6-a48dbe8f1194",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "82e0332f-511f-409e-b181-0f83294abe22",
             "name": "Create Persisted Query",
             "url": "/graphql/persist.json/{{TENANT}}/{{PQ_EVENT_BY_SLUG}}",
             "method": "PUT",
             "sortNum": 10000,
-            "created": "2023-02-28T17:45:38.022Z",
-            "modified": "2023-02-28T17:45:38.022Z",
+            "created": "2023-03-02T00:41:01.245Z",
+            "modified": "2023-03-02T00:41:01.245Z",
             "headers": [],
             "params": [],
             "body": {
@@ -87,15 +87,15 @@
             "tests": []
         },
         {
-            "_id": "6384e0a2-ad98-410f-a4c5-02d554948454",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "842fdde4-2970-48fb-9d90-c91fc501a858",
+            "_id": "e6ba3c82-807b-47b9-892b-fd61e759c149",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "82e0332f-511f-409e-b181-0f83294abe22",
             "name": "Execute Persisted Query",
             "url": "/graphql/execute.json/{{TENANT}}/{{PQ_EVENT_BY_SLUG}};slug=summit-2023",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2023-02-28T17:45:38.025Z",
-            "modified": "2023-02-28T17:45:38.025Z",
+            "created": "2023-03-02T00:41:01.246Z",
+            "modified": "2023-03-02T00:41:01.246Z",
             "headers": [
                 {
                     "name": "Content-Type",
@@ -106,239 +106,15 @@
             "tests": []
         },
         {
-            "_id": "90e88608-84e7-47ac-b05a-4b2e147bf8cf",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
-            "name": "Create Speker Model",
-            "url": "/adobe/cf/models",
-            "method": "POST",
-            "sortNum": 230000,
-            "created": "2023-02-22T01:15:18.793Z",
-            "modified": "2023-02-22T01:20:35.310Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"configurationFolder\": \"/conf/wknd-shared\",\n  \"name\": \"Event Speaker\",\n  \"description\": \"\",\n  \"status\": \"enabled\",\n  \"fields\": [\n        {\n          \"name\": \"name\",\n          \"label\": \"Name\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"text\",\n            \"metadata\": {\n              \"maxLength\": 255\n            }\n          },\n          \"multiple\": false\n        },\n        {\n          \"name\": \"title\",\n          \"label\": \"Title\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"text\",\n            \"metadata\": {\n              \"maxLength\": 255\n            }\n          },\n          \"multiple\": false\n        },\n        {\n          \"name\": \"profilePicture\",\n          \"label\": \"Profile Picture\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"content-reference\",\n            \"metadata\": {\n              \"allowedContentTypes\": [\n                \"image\"\n              ]\n            }\n          },\n          \"multiple\": false\n        }\n      ]\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "0e6bd2e1-f88c-4616-8384-13799414c0af",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
-            "name": "Create Keynote Speker Model",
-            "url": "/adobe/cf/models",
-            "method": "POST",
-            "sortNum": 240000,
-            "created": "2023-02-22T01:20:02.280Z",
-            "modified": "2023-02-28T01:30:46.074Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"configurationFolder\": \"/conf/wknd-shared\",\n  \"name\": \"Keynote Speaker\",\n  \"description\": \"\",\n  \"status\": \"enabled\",\n  \"fields\": [\n        {\n          \"name\": \"name\",\n          \"label\": \"Name\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"text\",\n            \"metadata\": {\n              \"maxLength\": 255\n            }\n          },\n          \"multiple\": false\n        },\n        {\n          \"name\": \"title\",\n          \"label\": \"Title\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"text\",\n            \"metadata\": {\n              \"maxLength\": 255\n            }\n          },\n          \"multiple\": false\n        },\n        {\n          \"name\": \"heroImage\",\n          \"label\": \"Hero Image\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"content-reference\",\n            \"metadata\": {\n              \"allowedContentTypes\": [\n                \"image\"\n              ],\n              \"root\": \"/content/dam/wknd-shared/en/events\"\n            }\n          },\n          \"multiple\": false\n        },\n        {\n          \"name\": \"profilePicture\",\n          \"label\": \"Profile Picture\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"content-reference\",\n            \"metadata\": {\n              \"allowedContentTypes\": [\n                \"image\"\n              ],\n              \"root\": \"/content/dam/wknd-shared/en\"\n            }\n          },\n          \"multiple\": false\n        },\n        {\n          \"name\": \"biography\",\n          \"label\": \"Biography\",\n          \"required\": false,\n          \"type\": {\n            \"id\": \"long-text\",\n            \"metadata\": {\n              \"mimeType\": \"text/html\"\n            }\n          },\n          \"multiple\": false\n        }\n      ]\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "f98f83da-09d2-4925-869a-12c4a70823b9",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
-            "name": "Update Event Model",
-            "url": "/adobe/cf/models/{modelId}",
-            "method": "PATCH",
-            "sortNum": 250000,
-            "created": "2023-02-22T01:21:54.426Z",
-            "modified": "2023-02-24T23:14:05.499Z",
-            "headers": [
-                {
-                    "name": "Content-Type",
-                    "value": "application/json-patch+json"
-                },
-                {
-                    "name": "If-Match",
-                    "value": "\"16f21ad37587d52486520921637cca99\""
-                }
-            ],
-            "params": [
-                {
-                    "name": "modelId",
-                    "value": "L2NvbmYvd2tuZC1zaGFyZWQvc2V0dGluZ3MvZGFtL2NmbS9tb2RlbHMvZXZlbnQ",
-                    "isPath": true
-                }
-            ],
-            "body": {
-                "type": "json",
-                "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/6\",\n    \"value\": {\n      \"name\": \"speakers\",\n      \"label\": \"Speakers\",\n      \"required\": false,\n      \"type\": {\n        \"id\": \"content-fragment\",\n        \"metadata\": {\n          \"items\": [\n            \"L2NvbmYvd2tuZC1zaGFyZWQvc2V0dGluZ3MvZGFtL2NmbS9tb2RlbHMvZXZlbnQta2V5bm90ZS1zcGVha2Vy\",\n            \"L2NvbmYvd2tuZC1zaGFyZWQvc2V0dGluZ3MvZGFtL2NmbS9tb2RlbHMvZXZlbnQtc3BlYWtlcjA\"\n          ]\n        }\n      },\n      \"multiple\": true\n    }\n  }\n]",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "75833c6b-53df-49a0-add2-39986b777429",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
-            "name": "Create Speaker - Shantanu Narayen",
-            "url": "/adobe/cf/fragments",
-            "method": "POST",
-            "sortNum": 260000,
-            "created": "2023-02-23T23:38:10.108Z",
-            "modified": "2023-02-24T22:40:16.565Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"title\": \"Shantanu Narayen\",\n  \"model\": \"/conf/wknd-shared/settings/dam/cfm/models/event-speaker0\",\n  \"parentPath\": \"/content/dam/wknd-shared/en/events/summit-2023\",\n  \"data\": {\n    \"name\": \"Shantanu Narayen\",\n    \"title\": \"Chairman and CEO, Adobe\",\n    \"profilePicture\": \"/content/dam/wknd-shared/en/events/summit-2023/shantanu-narayen.png\"\n  }\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "be584cf6-50b7-4797-9a58-b43d5a5fff11",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
-            "name": "Create Keynote Speaker - Aaron Sorkin",
-            "url": "/adobe/cf/fragments",
-            "method": "POST",
-            "sortNum": 262500,
-            "created": "2023-02-24T22:30:59.657Z",
-            "modified": "2023-02-28T01:39:42.208Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"title\": \"Aaron Sorkin\",\n  \"model\": \"/conf/wknd-shared/settings/dam/cfm/models/keynote-speaker0\",\n  \"parentPath\": \"/content/dam/wknd-shared/en/events/summit-2023\",\n  \"data\": {\n    \"name\": \"Aaron Sorkin\",\n    \"title\": \"Academy Award-Winning Writer, Director, and Playwright\",\n    \"heroImage\": \"/content/dam/wknd-shared/en/events/summit-2023/desktop-sorkin.png\",\n    \"profilePicture\": \"/content/dam/wknd-shared/en/events/summit-2023/Aaron-Sorkin_1674499787834001xHd5.jpg\",\n    \"biography\": \"<p>Academy-Award winning writer, director and renowned playwright Aaron Sorkin graduated from Syracuse University with a B.F.A. in Theatre.</p>\\n<p>He made his Broadway playwriting debut at the age of 28 with the military courtroom drama A Few Good Men, for which he received the John Gassner Award as Outstanding New American Playwright. The following year saw the debut of his off-Broadway play Making Movies, and in 2007, he returned to Broadway with The Farnsworth Invention, directed by Des McAnuff.</p>\\n<p>Sorkin made the jump to feature films with his 1993 adaptation of his own play A Few Good Men. The film was nominated for four Academy Awards including Best Picture. He followed this success with the screenplays for Malice, starring Alec Baldwin and Nicole Kidman, The American President, starring Michael Douglas and Annette Bening, and Charlie Wilson’s War, starring Tom Hanks, Philip Seymour Hoffman, and Julia Roberts.</p>\\n<p>In 2011, Sorkin won the Academy Award, Critics’ Choice Award, British Academy of Film and Television Arts Award, and Writers Guild Award in the Best Adapted Screenplay category as well as the USC Scripter Award for The Social Network.&nbsp;</p>\\n<p>The following year, Sorkin adapted, alongside Steve Zaillian with story by Stan Chervin, Moneyball for the big screen. The film won Sorkin the Critics’ Choice Award and New York Film Critics’ Award for Best Adapted Screenplay, and went on to receive four Academy Award nominations including Best Picture and Best Adapted Screenplay. In 2015, Sorkin wrote the feature film Steve Jobs based on the Walter Isaacson biography of the late Apple co-founder. His adaptation garnered him nominations for a Broadcast Film Critics’ Association (BFCA) Critics’ Choice Award, Writers Guild Award, and multiple regional critics’ association awards.</p>\\n<p>Sorkin made his directorial debut in 2017 with Molly’s Game, which he also wrote based on the personal memoir by Molly Bloom. It made its world premiere at the 2017 Toronto International Film Festival to rave reviews and garnered Sorkin Best Screenplay nominations for an Academy Award, Writers Guild Award, and BAFTA Award. In 2020, Sorkin premiered his feature drama The Trial of the Chicago 7, which he wrote and directed for Netflix. The picture features an all-star ensemble cast and garnered Sorkin six Critics’ Choice Awards and three SAG awards.</p>\\n<p>For television, Sorkin created and produced NBC’s renowned series “The West Wing,” which earned nine Emmy nominations in its first season. The series went on to win a total of 26 Primetime Emmy Awards, including Outstanding Drama Series for four consecutive years from 2000-2003. For his work on the series, Sorkin twice received the Peabody Award and Humanitas Prize, as well as three Television Critics Association Awards and Producers Guild Awards, and a Writers Guild Award. He also produced and wrote the television series “Sports Night” for ABC, which garnered eight Emmy nominations and won the Humanitas Prize and the Television Critics Association Award. Additionally, Sorkin created the series “Studio 60 on the Sunset Strip,” which took place behind-the-scenes of a live sketch-comedy show and received five Emmy nominations in 2007.</p>\\n<p>In 2012, Sorkin made his return to television with the HBO drama “The Newsroom,” bringing in an average of 7 million viewers per episode.&nbsp;The show won a Critics Choice Television Award for Most Exciting New Series and has been nominated for numerous awards, including five Primetime Emmy Awards, a Writers Guild Award, and Directors Guild Award. The third and final season aired on HBO in 2014, closing the series on a ratings season high.</p>\\n<p>In 2018, Sorkin premiered his Broadway stage adaptation of Harper Lee’s iconic American novel To Kill a Mockingbird. The production&nbsp; currently holds the title of the highest grossing American play in Broadway history.&nbsp;</p>\\n\"\n  }\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "76c5cbde-9897-4363-9485-605328ddef9c",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
-            "name": "Create Speaker - Dave Ricks",
-            "url": "/adobe/cf/fragments",
-            "method": "POST",
-            "sortNum": 265000,
-            "created": "2023-02-24T22:35:06.671Z",
-            "modified": "2023-02-24T22:43:03.155Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"title\": \"Dave Ricks\",\n  \"model\": \"/conf/wknd-shared/settings/dam/cfm/models/event-speaker0\",\n  \"parentPath\": \"/content/dam/wknd-shared/en/events/summit-2023\",\n  \"data\": {\n    \"name\": \"Dave Ricks\",\n    \"title\": \"CEO, Eli Lilly\",\n    \"profilePicture\": \"/content/dam/wknd-shared/en/events/summit-2023/dave-ricks.png\"\n  }\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "e9a6139f-e199-44e8-b62a-68567b5ef953",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
-            "name": "Update Summit 2023 Event",
-            "url": "/adobe/cf/fragments/{fragmentId}",
-            "method": "PATCH",
-            "sortNum": 270000,
-            "created": "2023-02-24T22:38:12.027Z",
-            "modified": "2023-02-24T23:35:19.534Z",
-            "headers": [
-                {
-                    "name": "Accept",
-                    "value": "application/json"
-                },
-                {
-                    "name": "If-Match",
-                    "value": "\"6979fa892fdddc684c99321943af4cbe\""
-                },
-                {
-                    "name": "Content-Type",
-                    "value": "application/json-patch+json"
-                }
-            ],
-            "params": [
-                {
-                    "name": "fragmentId",
-                    "value": "91e7f811-bab4-4b77-bd56-cfb3dab52b4e",
-                    "isPath": true
-                }
-            ],
-            "body": {
-                "type": "json",
-                "raw": "[\n  {\n    \"op\": \"replace\",\n    \"path\": \"/speakers\",\n    \"value\": [\n       \"/content/dam/wknd-shared/en/events/summit-2023/shantanu-narayen\",\n      \"/content/dam/wknd-shared/en/events/summit-2023/dave-ricks\"\n    ]\n  }\n]",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "afb7cc28-1d97-44e0-83fe-621094452a4f",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
-            "name": "Create Speaker - Karen Hopkins",
-            "url": "/adobe/cf/fragments",
-            "method": "POST",
-            "sortNum": 275000,
-            "created": "2023-02-24T22:37:01.752Z",
-            "modified": "2023-02-24T22:43:30.124Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"title\": \"Karen Hopkins\",\n  \"model\": \"/conf/wknd-shared/settings/dam/cfm/models/event-speaker0\",\n  \"parentPath\": \"/content/dam/wknd-shared/en/events/summit-2023\",\n  \"data\": {\n    \"name\": \"Karen Hopkins\",\n    \"title\": \"CMO, EY\",\n    \"profilePicture\": \"/content/dam/wknd-shared/en/events/summit-2023/karen-hopkins.png\"\n  }\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "7570ecab-f752-4185-a9c9-7b9ceb893da5",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
-            "name": "Create Speaker -  Lisa Su",
-            "url": "/adobe/cf/fragments",
-            "method": "POST",
-            "sortNum": 285000,
-            "created": "2023-02-24T22:37:15.642Z",
-            "modified": "2023-02-24T22:43:57.332Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"title\": \"Lisa Su\",\n  \"model\": \"/conf/wknd-shared/settings/dam/cfm/models/event-speaker0\",\n  \"parentPath\": \"/content/dam/wknd-shared/en/events/summit-2023\",\n  \"data\": {\n    \"name\": \"Lisa Su\",\n    \"title\": \"AMD Chair and CEO, Advanced Micro Devices, Inc.\",\n    \"profilePicture\": \"/content/dam/wknd-shared/en/events/summit-2023/lisa-su.png\"\n  }\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "fb483c06-619c-4881-bad3-e67f4893e0e8",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
-            "name": "Create Speaker -  Marcus East",
-            "url": "/adobe/cf/fragments",
-            "method": "POST",
-            "sortNum": 295000,
-            "created": "2023-02-24T22:37:33.338Z",
-            "modified": "2023-02-24T22:45:38.434Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"title\": \"Marcus East\",\n  \"model\": \"/conf/wknd-shared/settings/dam/cfm/models/event-speaker0\",\n  \"parentPath\": \"/content/dam/wknd-shared/en/events/summit-2023\",\n  \"data\": {\n    \"name\": \"Marcus East\",\n    \"title\": \"EVP and CDO, T-Mobile\",\n    \"profilePicture\": \"/content/dam/wknd-shared/en/events/summit-2023/marcus_east.png\"\n  }\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "d26026de-53dd-4fae-919b-b4a7385dcab9",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
+            "_id": "1b76c462-6ace-48f4-95c2-34554eb8e7de",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
             "name": "List Models",
             "url": "/adobe/cf/models",
             "method": "GET",
-            "sortNum": 305000,
-            "created": "2023-02-12T19:53:40.368Z",
-            "modified": "2023-02-28T17:47:19.585Z",
+            "sortNum": 115000,
+            "created": "2023-03-02T00:41:01.258Z",
+            "modified": "2023-03-02T00:55:13.683Z",
             "headers": [
                 {
                     "name": "User-Agent",
@@ -350,82 +126,35 @@
             "tests": []
         },
         {
-            "_id": "295812f0-1e14-4a82-8dd2-13c68dc4c27d",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
+            "_id": "d4681f12-160f-41fc-904f-1e6d10a19b69",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
             "name": "Get Model",
             "url": "/adobe/cf/models/{modelId}",
             "method": "GET",
-            "sortNum": 315000,
-            "created": "2023-02-12T19:53:40.373Z",
-            "modified": "2023-02-28T17:47:25.034Z",
+            "sortNum": 172500,
+            "created": "2023-03-02T00:41:01.259Z",
+            "modified": "2023-03-02T01:35:35.336Z",
             "headers": [],
             "params": [
                 {
                     "name": "modelId",
-                    "value": "L2NvbmYvd2tuZC1zaGFyZWQvc2V0dGluZ3MvZGFtL2NmbS9tb2RlbHMvZXZlbnQ",
+                    "value": "",
                     "isPath": true
                 }
             ],
             "tests": []
         },
         {
-            "_id": "a58a37f7-aafa-4051-a996-8cedf3f1323f",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
-            "name": "Get Data Types",
-            "url": "/adobe/cf/datatypes",
-            "method": "GET",
-            "sortNum": 325000,
-            "created": "2023-02-12T19:53:40.385Z",
-            "modified": "2023-02-28T17:47:27.451Z",
-            "headers": [],
-            "params": [
-                {
-                    "name": "cursor",
-                    "value": "",
-                    "isDisabled": true,
-                    "isPath": false
-                },
-                {
-                    "name": "value",
-                    "value": "",
-                    "isDisabled": true,
-                    "isPath": false
-                }
-            ],
-            "tests": []
-        },
-        {
-            "_id": "4079ab36-22df-4c2e-86f2-da4da94c40e8",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
-            "name": "Get Model Headers",
-            "url": "/adobe/cf/models/{modelId}",
-            "method": "HEAD",
-            "sortNum": 335000,
-            "created": "2023-02-12T19:53:40.376Z",
-            "modified": "2023-02-28T17:47:29.868Z",
-            "headers": [],
-            "params": [
-                {
-                    "name": "modelId",
-                    "value": "L2NvbmYvd2tuZC1zaGFyZWQvc2V0dGluZ3MvZGFtL2NmbS9tb2RlbHMvZXZlbnQ",
-                    "isPath": true
-                }
-            ],
-            "tests": []
-        },
-        {
-            "_id": "c5fe1690-9a61-42b9-a144-3693b6ee634b",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
+            "_id": "04829f2c-c900-44c2-8640-d17f32ec50cd",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
             "name": "List Content Fragments",
             "url": "/adobe/cf/fragments?path=/content/dam/wknd-shared/en/events",
             "method": "GET",
-            "sortNum": 345000,
-            "created": "2023-02-12T19:53:40.369Z",
-            "modified": "2023-02-28T17:48:05.876Z",
+            "sortNum": 201250,
+            "created": "2023-03-02T00:41:01.262Z",
+            "modified": "2023-03-02T00:57:47.991Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -446,15 +175,15 @@
             "tests": []
         },
         {
-            "_id": "ddbc1736-a00f-4868-9306-044c7462cdb7",
-            "colId": "f80e9316-963c-47f0-a30a-5da97fa63ae6",
-            "containerId": "878c3ab1-3b80-4b09-b1bc-1c92a4e2b0be",
+            "_id": "7020ebc8-83d7-4fc0-a406-a6f1b225e7f7",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
             "name": "Get Content Fragment by ID",
             "url": "/adobe/cf/fragments/{fragmentId}",
             "method": "GET",
-            "sortNum": 355000,
-            "created": "2023-02-12T19:53:40.372Z",
-            "modified": "2023-02-28T17:48:11.888Z",
+            "sortNum": 215625,
+            "created": "2023-03-02T00:41:01.263Z",
+            "modified": "2023-03-02T01:35:24.707Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -468,13 +197,265 @@
             "params": [
                 {
                     "name": "fragmentId",
-                    "value": "91e7f811-bab4-4b77-bd56-cfb3dab52b4e",
+                    "value": "",
                     "isPath": true
                 }
             ],
             "auth": {
                 "type": "bearer",
                 "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "cf1f9d63-661e-46ae-8aa8-50d22f1a9667",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
+            "name": "Create Speaker Model",
+            "url": "/adobe/cf/models",
+            "method": "POST",
+            "sortNum": 219218.8,
+            "created": "2023-03-02T00:41:01.247Z",
+            "modified": "2023-03-02T01:04:48.823Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"configurationFolder\": \"/conf/wknd-shared\",\n  \"name\": \"Event Speaker\",\n  \"description\": \"\",\n  \"status\": \"enabled\",\n  \"fields\": [\n        {\n          \"name\": \"name\",\n          \"label\": \"Name\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"text\",\n            \"metadata\": {\n              \"maxLength\": 255\n            }\n          },\n          \"multiple\": false\n        },\n        {\n          \"name\": \"title\",\n          \"label\": \"Title\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"text\",\n            \"metadata\": {\n              \"maxLength\": 255\n            }\n          },\n          \"multiple\": false\n        },\n        {\n          \"name\": \"profilePicture\",\n          \"label\": \"Profile Picture\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"content-reference\",\n            \"metadata\": {\n              \"allowedContentTypes\": [\n                \"image\"\n              ]\n            }\n          },\n          \"multiple\": false\n        }\n      ]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c899954a-afd9-4f10-82cd-dde367df7725",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
+            "name": "Get Data Types",
+            "url": "/adobe/cf/datatypes",
+            "method": "GET",
+            "sortNum": 222812.5,
+            "created": "2023-03-02T00:41:01.260Z",
+            "modified": "2023-03-02T01:03:24.138Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "cursor",
+                    "value": "",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "value",
+                    "value": "",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "33f7c6a0-8799-4a11-922e-e96ca824e675",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
+            "name": "Create Keynote Speaker Model",
+            "url": "/adobe/cf/models",
+            "method": "POST",
+            "sortNum": 240000,
+            "created": "2023-03-02T00:41:01.248Z",
+            "modified": "2023-03-02T00:41:01.248Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"configurationFolder\": \"/conf/wknd-shared\",\n  \"name\": \"Keynote Speaker\",\n  \"description\": \"\",\n  \"status\": \"enabled\",\n  \"fields\": [\n        {\n          \"name\": \"name\",\n          \"label\": \"Name\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"text\",\n            \"metadata\": {\n              \"maxLength\": 255\n            }\n          },\n          \"multiple\": false\n        },\n        {\n          \"name\": \"title\",\n          \"label\": \"Title\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"text\",\n            \"metadata\": {\n              \"maxLength\": 255\n            }\n          },\n          \"multiple\": false\n        },\n        {\n          \"name\": \"heroImage\",\n          \"label\": \"Hero Image\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"content-reference\",\n            \"metadata\": {\n              \"allowedContentTypes\": [\n                \"image\"\n              ],\n              \"root\": \"/content/dam/wknd-shared/en/events\"\n            }\n          },\n          \"multiple\": false\n        },\n        {\n          \"name\": \"profilePicture\",\n          \"label\": \"Profile Picture\",\n          \"required\": true,\n          \"type\": {\n            \"id\": \"content-reference\",\n            \"metadata\": {\n              \"allowedContentTypes\": [\n                \"image\"\n              ],\n              \"root\": \"/content/dam/wknd-shared/en\"\n            }\n          },\n          \"multiple\": false\n        },\n        {\n          \"name\": \"biography\",\n          \"label\": \"Biography\",\n          \"required\": false,\n          \"type\": {\n            \"id\": \"long-text\",\n            \"metadata\": {\n              \"mimeType\": \"text/html\"\n            }\n          },\n          \"multiple\": false\n        }\n      ]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7ac99c17-fcd3-4418-8e21-6aabb1fbc090",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
+            "name": "Get Model Headers",
+            "url": "/adobe/cf/models/{modelId}",
+            "method": "HEAD",
+            "sortNum": 245000,
+            "created": "2023-03-02T01:12:48.839Z",
+            "modified": "2023-03-02T01:36:07.845Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "modelId",
+                    "value": "",
+                    "isPath": true
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "a36dc720-95db-4e0e-8e6c-cd5d9a36d325",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
+            "name": "Update Event Model",
+            "url": "/adobe/cf/models/{modelId}",
+            "method": "PATCH",
+            "sortNum": 250000,
+            "created": "2023-03-02T00:41:01.249Z",
+            "modified": "2023-03-02T01:36:28.098Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json-patch+json"
+                },
+                {
+                    "name": "If-Match",
+                    "value": ""
+                }
+            ],
+            "params": [
+                {
+                    "name": "modelId",
+                    "value": "",
+                    "isPath": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/6\",\n    \"value\": {\n      \"name\": \"speakers\",\n      \"label\": \"Speakers\",\n      \"required\": false,\n      \"type\": {\n        \"id\": \"content-fragment\",\n        \"metadata\": {\n          \"items\": [\n          \n           ]\n        }\n      },\n      \"multiple\": true\n    }\n  }\n]",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a0d7a2f0-5a17-4e97-96ef-325c50e25def",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
+            "name": "Create Speaker - Shantanu Narayen",
+            "url": "/adobe/cf/fragments",
+            "method": "POST",
+            "sortNum": 260000,
+            "created": "2023-03-02T00:41:01.250Z",
+            "modified": "2023-03-02T01:21:03.510Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Shantanu Narayen\",\n  \"model\": \"/conf/wknd-shared/settings/dam/cfm/models/event-speaker\",\n  \"parentPath\": \"/content/dam/wknd-shared/en/events/summit-2023\",\n  \"data\": {\n    \"name\": \"Shantanu Narayen\",\n    \"title\": \"Chairman and CEO, Adobe\",\n    \"profilePicture\": \"/content/dam/wknd-shared/en/events/summit-2023/shantanu-narayen.png\"\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1c62bc97-bf5a-491d-8581-b66f244880b3",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
+            "name": "Create Keynote Speaker - Aaron Sorkin",
+            "url": "/adobe/cf/fragments",
+            "method": "POST",
+            "sortNum": 262500,
+            "created": "2023-03-02T00:41:01.251Z",
+            "modified": "2023-03-02T01:21:28.671Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Aaron Sorkin\",\n  \"model\": \"/conf/wknd-shared/settings/dam/cfm/models/keynote-speaker\",\n  \"parentPath\": \"/content/dam/wknd-shared/en/events/summit-2023\",\n  \"data\": {\n    \"name\": \"Aaron Sorkin\",\n    \"title\": \"Academy Award-Winning Writer, Director, and Playwright\",\n    \"heroImage\": \"/content/dam/wknd-shared/en/events/summit-2023/aaron-sorkin-hero.png\",\n    \"profilePicture\": \"/content/dam/wknd-shared/en/events/summit-2023/aaron-sorkin.jpg\",\n    \"biography\": \"<p>Academy-Award winning writer, director and renowned playwright Aaron Sorkin graduated from Syracuse University with a B.F.A. in Theatre.</p>\\n<p>He made his Broadway playwriting debut at the age of 28 with the military courtroom drama A Few Good Men, for which he received the John Gassner Award as Outstanding New American Playwright. The following year saw the debut of his off-Broadway play Making Movies, and in 2007, he returned to Broadway with The Farnsworth Invention, directed by Des McAnuff.</p>\\n<p>Sorkin made the jump to feature films with his 1993 adaptation of his own play A Few Good Men. The film was nominated for four Academy Awards including Best Picture. He followed this success with the screenplays for Malice, starring Alec Baldwin and Nicole Kidman, The American President, starring Michael Douglas and Annette Bening, and Charlie Wilson’s War, starring Tom Hanks, Philip Seymour Hoffman, and Julia Roberts.</p>\\n<p>In 2011, Sorkin won the Academy Award, Critics’ Choice Award, British Academy of Film and Television Arts Award, and Writers Guild Award in the Best Adapted Screenplay category as well as the USC Scripter Award for The Social Network.&nbsp;</p>\\n<p>The following year, Sorkin adapted, alongside Steve Zaillian with story by Stan Chervin, Moneyball for the big screen. The film won Sorkin the Critics’ Choice Award and New York Film Critics’ Award for Best Adapted Screenplay, and went on to receive four Academy Award nominations including Best Picture and Best Adapted Screenplay. In 2015, Sorkin wrote the feature film Steve Jobs based on the Walter Isaacson biography of the late Apple co-founder. His adaptation garnered him nominations for a Broadcast Film Critics’ Association (BFCA) Critics’ Choice Award, Writers Guild Award, and multiple regional critics’ association awards.</p>\\n<p>Sorkin made his directorial debut in 2017 with Molly’s Game, which he also wrote based on the personal memoir by Molly Bloom. It made its world premiere at the 2017 Toronto International Film Festival to rave reviews and garnered Sorkin Best Screenplay nominations for an Academy Award, Writers Guild Award, and BAFTA Award. In 2020, Sorkin premiered his feature drama The Trial of the Chicago 7, which he wrote and directed for Netflix. The picture features an all-star ensemble cast and garnered Sorkin six Critics’ Choice Awards and three SAG awards.</p>\\n<p>For television, Sorkin created and produced NBC’s renowned series “The West Wing,” which earned nine Emmy nominations in its first season. The series went on to win a total of 26 Primetime Emmy Awards, including Outstanding Drama Series for four consecutive years from 2000-2003. For his work on the series, Sorkin twice received the Peabody Award and Humanitas Prize, as well as three Television Critics Association Awards and Producers Guild Awards, and a Writers Guild Award. He also produced and wrote the television series “Sports Night” for ABC, which garnered eight Emmy nominations and won the Humanitas Prize and the Television Critics Association Award. Additionally, Sorkin created the series “Studio 60 on the Sunset Strip,” which took place behind-the-scenes of a live sketch-comedy show and received five Emmy nominations in 2007.</p>\\n<p>In 2012, Sorkin made his return to television with the HBO drama “The Newsroom,” bringing in an average of 7 million viewers per episode.&nbsp;The show won a Critics Choice Television Award for Most Exciting New Series and has been nominated for numerous awards, including five Primetime Emmy Awards, a Writers Guild Award, and Directors Guild Award. The third and final season aired on HBO in 2014, closing the series on a ratings season high.</p>\\n<p>In 2018, Sorkin premiered his Broadway stage adaptation of Harper Lee’s iconic American novel To Kill a Mockingbird. The production&nbsp; currently holds the title of the highest grossing American play in Broadway history.&nbsp;</p>\\n\"\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fc3ee3ae-e558-4d4f-adab-0255d41e5d51",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
+            "name": "Create Speaker - Anil Chakravarthy",
+            "url": "/adobe/cf/fragments",
+            "method": "POST",
+            "sortNum": 263750,
+            "created": "2023-03-02T01:25:22.988Z",
+            "modified": "2023-03-02T01:31:59.658Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Anil Chkravarthy\",\n  \"model\": \"/conf/wknd-shared/settings/dam/cfm/models/event-speaker\",\n  \"parentPath\": \"/content/dam/wknd-shared/en/events/summit-2023\",\n  \"data\": {\n    \"name\": \"Anil Chkravarthy\",\n    \"title\": \"President, Digital Experience Business, Adobe\",\n    \"profilePicture\": \"/content/dam/wknd-shared/en/events/summit-2023/anil-chakravarthy.png\"\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "88760535-3a83-4f70-bf61-7d6fdfe6dd90",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
+            "name": "Create Speaker - Dave Ricks",
+            "url": "/adobe/cf/fragments",
+            "method": "POST",
+            "sortNum": 265000,
+            "created": "2023-03-02T00:41:01.252Z",
+            "modified": "2023-03-02T01:23:04.616Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Dave Ricks\",\n  \"model\": \"/conf/wknd-shared/settings/dam/cfm/models/event-speaker\",\n  \"parentPath\": \"/content/dam/wknd-shared/en/events/summit-2023\",\n  \"data\": {\n    \"name\": \"Dave Ricks\",\n    \"title\": \"CEO, Eli Lilly\",\n    \"profilePicture\": \"/content/dam/wknd-shared/en/events/summit-2023/dave-ricks.png\"\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "10ecb8eb-eb11-4399-8412-84a5295456f0",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
+            "name": "Create Speaker - Karen Hopkins",
+            "url": "/adobe/cf/fragments",
+            "method": "POST",
+            "sortNum": 275000,
+            "created": "2023-03-02T00:41:01.255Z",
+            "modified": "2023-03-02T01:23:08.237Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Karen Hopkins\",\n  \"model\": \"/conf/wknd-shared/settings/dam/cfm/models/event-speaker\",\n  \"parentPath\": \"/content/dam/wknd-shared/en/events/summit-2023\",\n  \"data\": {\n    \"name\": \"Karen Hopkins\",\n    \"title\": \"CMO, EY\",\n    \"profilePicture\": \"/content/dam/wknd-shared/en/events/summit-2023/karen-hopkins.png\"\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1bd36c5b-488c-4285-8424-a1a65885ddcf",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
+            "name": "Create Speaker -  Lisa Su",
+            "url": "/adobe/cf/fragments",
+            "method": "POST",
+            "sortNum": 285000,
+            "created": "2023-03-02T00:41:01.256Z",
+            "modified": "2023-03-02T01:23:12.949Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Lisa Su\",\n  \"model\": \"/conf/wknd-shared/settings/dam/cfm/models/event-speaker\",\n  \"parentPath\": \"/content/dam/wknd-shared/en/events/summit-2023\",\n  \"data\": {\n    \"name\": \"Lisa Su\",\n    \"title\": \"AMD Chair and CEO, Advanced Micro Devices, Inc.\",\n    \"profilePicture\": \"/content/dam/wknd-shared/en/events/summit-2023/lisa-su.png\"\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "70779d6d-938e-4062-904c-85ac1ccba9ee",
+            "colId": "81d48375-04e3-43e3-9141-ec0f8aabf60e",
+            "containerId": "db734a12-ae9f-4ebe-9957-883b582ec5e5",
+            "name": "Create Speaker -  Marcus East",
+            "url": "/adobe/cf/fragments",
+            "method": "POST",
+            "sortNum": 287500,
+            "created": "2023-03-02T00:41:01.257Z",
+            "modified": "2023-03-02T01:23:17.202Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Marcus East\",\n  \"model\": \"/conf/wknd-shared/settings/dam/cfm/models/event-speaker\",\n  \"parentPath\": \"/content/dam/wknd-shared/en/events/summit-2023\",\n  \"data\": {\n    \"name\": \"Marcus East\",\n    \"title\": \"EVP and CDO, T-Mobile\",\n    \"profilePicture\": \"/content/dam/wknd-shared/en/events/summit-2023/marcus_east.png\"\n  }\n}",
+                "form": []
             },
             "tests": []
         }
