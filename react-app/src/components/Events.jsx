@@ -20,7 +20,7 @@ function EventItem(props) {
   }
 
   return (
-    <li className="event-item" itemScope>
+    <li className="event-item">
       <Link to={`/event:${props.slug}`}>
         <img className="event-item-image" src={`${props.teasingImage._publishUrl}`}
                 alt={props.title} itemProp="teasingImage" />
