@@ -18,13 +18,19 @@
 }
 ```
 
+Add the description property to the query.
 ```
 {
   eventByPath(
     _path: "/content/dam/wknd-shared/en/events/summit-2023/summit-2023"
   ) {
     item {
-      # Add to previous
+      _path
+      eventName
+      slug
+      startDate
+      endDate
+      # Add description
       description {
         html
       }
@@ -41,7 +47,15 @@
     _path: "/content/dam/wknd-shared/en/events/summit-2023/summit-2023"
   ) {
     item {
-      # Add to previous
+      _path
+      eventName
+      slug
+      startDate
+      endDate
+      description {
+        html
+      }
+      # Add speakers
       speakers {
         name
         title
@@ -59,6 +73,14 @@
     _path: "/content/dam/wknd-shared/en/events/summit-2023/summit-2023"
   ) {
     item {
+      _path
+      eventName
+      slug
+      startDate
+      endDate
+      description {
+        html
+      }
       # Replaces previous "speakers" section
       speakers {
         # For speakers we still return the same fields
@@ -87,7 +109,27 @@
     _path: "/content/dam/wknd-shared/en/events/summit-2023/summit-2023"
   ) {
     item {
-      # Add to previous
+      _path
+      eventName
+      slug
+      startDate
+      endDate
+      description {
+        html
+      }
+      speakers {
+        ...on EventSpeakerModel {
+          name
+          title
+        }
+        ...on KeynoteSpeakerModel {
+          name
+          biography {
+            html
+          }
+        }
+      }
+      # Add image reference
       teasingImage {
         ... on ImageRef {
           _path
@@ -102,12 +144,10 @@
 }
 ```
 
+Requesting all references
 ```
 {
-  eventByPath(
-    _path: "/content/dam/wknd-shared/en/events/summit-2023/summit-2023"
-  ) {
-    # Add to previous
+  eventByPath(_path: "/content/dam/wknd-shared/en/events/summit-2023/summit-2023") {
     _references {
       ... on ImageRef {
         _path
@@ -127,14 +167,35 @@
       }
     }
     item {
-      # Adjust the information requested from speakers
+      _path
+      eventName
+      slug
+      startDate
+      endDate
+      description {
+        html
+      }
       speakers {
-        name
-        title
-        # Add profile picture information (only the path)
-        profilePicture {
-          ... on ImageRef {
-            _path
+        ... on EventSpeakerModel {
+          name
+          title
+          # Add profile picture for speakers
+          profilePicture {
+            ... on ImageRef {
+              _path
+            }
+          }
+        }
+        ... on KeynoteSpeakerModel {
+          name
+          # Add profile picture for keynote speakers
+          heroImage {
+            ... on ImageRef {
+              _path
+            }
+          }
+          biography {
+            html
           }
         }
       }
@@ -167,6 +228,14 @@
   ) {
     # Remove "_references" information
     item {
+      _path
+      eventName
+      slug
+      startDate
+      endDate
+      description {
+        html
+      }
       # Replace teasing image with a dynamic URL
       teasingImage {
         ... on ImageRef {
@@ -198,12 +267,14 @@ query eventByPath($event: String!) {
 }
 ```
 
+First event is Summit 2023
 ```
 {
   "event": "/content/dam/wknd-shared/en/events/summit-2023/summit-2023"
 }
 ```
 
+Second event is MAX 2022
 ```
 {
   "event": "/content/dam/wknd-shared/en/events/max-2022/max-2022"
@@ -386,6 +457,7 @@ query eventByPath($event: String!) {
 
 ## 2.3.8 Filter results
 
+Looking for one specific speaker
 ```
 {
   breakoutSpeakerPaginated (
@@ -416,6 +488,7 @@ query eventByPath($event: String!) {
 }
 ```
 
+Looking for speakers based on a partial search criteria
 ```
 {
   breakoutSpeakerPaginated (
@@ -435,7 +508,12 @@ query eventByPath($event: String!) {
     }
   ) {
     edges {
-      ...
+      node {
+        _path
+        name
+        title
+        company
+      }
     }
   }
 }
@@ -443,6 +521,7 @@ query eventByPath($event: String!) {
 
 ## Comined Filters
 
+On a single field
 ```
 {
   breakoutSpeakerPaginated (
@@ -466,12 +545,18 @@ query eventByPath($event: String!) {
     }
   ) {
     edges {
-      ...
+      node {
+        _path
+        name
+        title
+        company
+      }
     }
   }
 }
 ```
 
+On multiple fields
 ```
 {
   breakoutSpeakerPaginated (
@@ -497,7 +582,12 @@ query eventByPath($event: String!) {
     }
   ) {
     edges {
-      ...
+      node {
+        _path
+        name
+        title
+        company
+      }
     }
   }
 }
@@ -529,7 +619,12 @@ query eventByPath($event: String!) {
     variation: "new"
   ) {
     edges {
-      ...
+      node {
+        _path
+        name
+        title
+        company
+      }
     }
   }
 }
@@ -537,6 +632,7 @@ query eventByPath($event: String!) {
 
 ## Querying Localized Content
 
+Return all matching articles regardless of their language
 ```
 {
   # Return articles based on a filter on difficulty
@@ -561,6 +657,7 @@ query eventByPath($event: String!) {
 }
 ```
 
+Filter by locale to only include French articles
 ```
 {
   adventureList (
@@ -576,7 +673,11 @@ query eventByPath($event: String!) {
     _locale: "fr"
   ) {
     items {
-      ...
+      _path
+      title
+      description {
+        plaintext
+      }
     }
   }
 }
@@ -584,6 +685,7 @@ query eventByPath($event: String!) {
 
 ## Filtering on nested properties
 
+List all articles
 ```
 {
   articleList {
@@ -608,6 +710,7 @@ query eventByPath($event: String!) {
 }
 ```
 
+Filter on articles with the same author
 ```
 {
   articleList(
@@ -625,7 +728,20 @@ query eventByPath($event: String!) {
     }
   ) {
     items {
-      ...
+      _path
+      title
+      slug
+      authorFragment {
+        firstName
+        lastName
+        profilePicture {
+          ...on ImageRef {
+            _path
+            _authorUrl
+            _publishUrl
+          }
+        }
+      }
     }
   }
 }
